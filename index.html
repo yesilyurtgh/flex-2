@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex-2</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <p>Order Kullanımı</p>
+    <div class="sıralama">
+        <div class="sıra">0</div>
+        <div class="sıra">1</div>
+        <div class="sıra">2</div>
+        <div class="sıra">3</div>
+        <div class="sıra">4</div>
+        <div class="sıra">5</div>
+        
+    </div>
+    <div class="flex">
+        <div class="items">A</div>
+        <div class="items">B</div>
+        <div class="items">C</div>
+        <div class="items">D</div>
+        <div class="items">E</div>
+        <div class="items">F</div>
+    </div>
+
+    <div class="flex">
+        <div class="items item1">A</div>
+        <div class="items item2">B</div>
+        <div class="items item3">C</div>
+        <div class="items item4">D</div>
+        <div class="items item5">E</div>
+        <div class="items item6">F</div>
+    </div>
+    <hr><hr>
+    <p>Align-self Kullanımı</p>
+    <div class="align-self">
+        <div class="as-items as-item1">Flex-start</div>
+        <div class="as-items as-item2">Center</div>
+        <div class="as-items as-item3">Flex-end</div>
+        <div class="as-items as-item4">Stretch</div>
+        
+    </div>
+    <hr><hr>
+    <p>Flex-grow Kullanımı</p>
+    <h6>elemanlara bir genişlik değeri tanımlanmadı grow=0 Default değerde </h6>
+     <div class="grow0">
+        <div class="gr0-items gr-item1">A</div>
+        <div class="gr0-items gr-item2">B</div>
+        <div class="gr0-items gr-item3">C</div>
+        <div class="gr0-items gr-item4">D</div>
+        <div class="gr0-items gr-item5">E</div>
+     </div> 
+     
+    <h6>elemanlara bir genişlik değeri tanımlanmadı grow=1 olunca elemanlara büyüyeebilme özelliği verildi </h6>
+    <div class="grow1">
+        <div class="gr1-items gr-item1">A</div>
+        <div class="gr1-items gr-item2">B</div>
+        <div class="gr1-items gr-item3">C</div>
+        <div class="gr1-items gr-item4">D</div>
+        <div class="gr1-items gr-item5">E</div>
+    </div> 
+    <h6>Default grow değerleri 0 iken B elemanına grow=2 değeri verildi</h6>
+    <div class="growx1">
+        <div class="grx1-items grx1-item1">A</div>
+        <div class="grx1-items grx1-item2">B</div>
+        <div class="grx1-items grx1-item3">C</div>
+        <div class="grx1-items grx1-item4">D</div>
+        <div class="grx1-items grx1-item5">E</div>
+    </div> 
+    <h6>Bütün elemanların grow değerleri 1 iken C elemanına grow=2 değeri verildi</h6>
+    <div class="growx2">
+        <div class="grx2-items grx2-item1">A</div>
+        <div class="grx2-items grx2-item2">B</div>
+        <div class="grx2-items grx2-item3">C(grow=2)</div>
+        <div class="grx2-items grx2-item4">D</div>
+        <div class="grx2-items grx2-item5">E</div>
+    </div> 
+    <h6>Bütün elemanların grow değerleri 1 iken C ve A elemanına grow=3 değeri verildi</h6>
+    <div class="growx3">
+        <div class="grx3-items grx3-item1">A(grow=3)</div>
+        <div class="grx3-items grx3-item2">B</div>
+        <div class="grx3-items grx3-item3">C(grow=3)</div>
+        <div class="grx3-items grx3-item4">D</div>
+        <div class="grx3-items grx3-item5">E</div>
+    </div> 
+    <hr><hr>
+    <p>Flex-shring Kullanımı</p>
+    <h6>width=250px ve shring=1 Default değerde(Küçülerek sayfaya sığdıklarına dikkat edin) </h6>
+     <div class="shring0">
+        <div class="sh0-items sh-item1">A</div>
+        <div class="sh0-items sh-item2">B</div>
+        <div class="sh0-items sh-item3">C</div>
+        <div class="sh0-items sh-item4">D</div>
+        <div class="sh0-items sh-item5">E</div>
+     </div> 
+     
+    <h6>width=250px ve shring=0 (boyutlar korunup scroll oluştu) </h6>
+    <div class="shring1">
+        <div class="sh1-items sh-item1">A</div>
+        <div class="sh1-items sh-item2">B</div>
+        <div class="sh1-items sh-item3">C</div>
+        <div class="sh1-items sh-item4">D</div>
+        <div class="sh1-items sh-item5">E</div>
+    </div> 
+    <h6>width=250px ve B->shring=0 diğer Elamanlar->shring=1</h6>
+    <div class="shringx1">
+        <div class="shx1-items shx1-item1">A</div>
+        <div class="shx1-items shx1-item2">B(shring=0)</div>
+        <div class="shx1-items shx1-item3">C</div>
+        <div class="shx1-items shx1-item4">D</div>
+        <div class="shx1-items shx1-item5">E</div>
+    </div> 
+    <h6>width=250px ve B,D->shring=0 diğer Elamanlar->shring=1</h6>
+    <div class="shringx2">
+        <div class="shx2-items shx2-item1">A</div>
+        <div class="shx2-items shx2-item2">B(shring=0)</div>
+        <div class="shx2-items shx2-item3">C</div>
+        <div class="shx2-items shx2-item4">D(shring=0)</div>
+        <div class="shx2-items shx2-item5">E</div>
+    </div> 
+    <h6>width=200px A>shring=0;B,C>shring=1;D,E>shring=2 <br> A hiç küçülmez, B-C bir birim küçülür, D-E iki birim küçülür.</h6>
+    <div class="shringx3">
+        <div class="shx3-items shx3-item1">A(shrin=0)</div>
+        <div class="shx3-items shx3-item2">B(sh=1)</div>
+        <div class="shx3-items shx3-item3">C(sh=1)</div>
+        <div class="shx3-items shx3-item4">D(2)</div>
+        <div class="shx3-items shx3-item5">E(2)</div>
+    </div> 
+        
+        
+    
+</body>
+</html>
